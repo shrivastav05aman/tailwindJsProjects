@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart</title>
+    <link rel="stylesheet" href="./output.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
+        integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<body>
+    <div class="w-screen h-screen bg-blue-950 ">
+        <!-- header -->
+        <header class="w-full h-40 text-white flex items-center justify-center border-b-white border-b-4">
+            <p class="text-8xl font-bold tracking-widest">Products</p>
+            <a href="./cart.html">Cart</a>
+        </header>
+
+
+        <!-- navbar -->
+        <nav class="w-full bg-white h-8 ">
+            <div class="flex justify-between px-10">
+                <a href="./index.html"><i class="fa-solid fa-house text-2xl text-blue-950 cursor-pointer"></i></a>
+                <a href="./cart.html"><i class="fa-solid fa-cart-shopping text-2xl text-blue-950 cursor-pointer"></i></a>
+        
+            </div>
+        </nav>
+        
+        <!-- products and filter -->
+        <section class="flex w-full h-[calc(100vh-192px)] text-center ">
+            <!-- filter -->
+            <div class="filter  border-r-white border-r-2 md:w-1/4 px-5 py-4">
+                <div class="border-2 border-black bg-white rounded-xl py-3 flex flex-col items-center space-y-4 md:items-start px-6">
+                    <h1 class="self-center text-3xl font-bold">Filter</h1>
+                    <!-- filters by category -->
+                    <div class="categories flex flex-col items-start space-y-2">
+                        <div>
+                            <!-- <input type="checkbox" name="groceries" id="" class="">
+                            <label for="groceries" class="text-xl font-bold ">Groceries</label> -->
+                        </div>
+                    </div>
+
+                    <!-- button to filter by category -->
+                    <button class="categorybtn cursor-pointer py-2 px-1 bg-blue-950 text-white lg:py-3 lg:px-2 font-bold rounded-lg border-none outline-none hover:bg-blue-900 ease-linear duration-200 lg:text-xl lg:w-full">Filter by Category</button>
+
+
+                    <!-- filters by price -->
+                    <div class="prices flex flex-col items-start space-y-2">
+                        <!-- price filters -->
+                        <div>
+                            <input type="checkbox" name="groceries" id="" class="">
+                            <label for="groceries" class="text-xl font-bold ">0-100</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="100-500" id="" class="">
+                            <label for="groceries" class="text-xl font-bold ">100-500</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="500-1000" id="" class="">
+                            <label for="groceries" class="text-xl font-bold ">500-1000</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" name="1000-5000" id="" class="">
+                            <label for="groceries" class="text-xl font-bold ">1000-5000</label>
+                        </div>                        
+                    </div>
+
+                    <!-- button to filter by price -->
+                    <button
+                        class="pricebtn cursor-pointer py-2 px-1 bg-blue-950 text-white lg:py-3 lg:px-2 font-bold rounded-lg border-none outline-none hover:bg-blue-900 ease-linear duration-200 lg:text-xl w-full">Filter
+                        by Price</button>
+
+                    <!-- button to reset filters -->
+                    <button
+                        class="resetBtn cursor-pointer py-2 px-1 bg-blue-950 text-white lg:py-3 lg:px-2 font-bold rounded-lg border-none outline-none hover:bg-blue-900 ease-linear duration-200 lg:text-xl w-full">Reset Filters</button>
+                    
+                </div>
+                
+            </div>
+
+            <!-- products -->
+            <div class="products w-full md:w-3/4  px-10 py-6 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 overflow-scroll gap-10 overflow-x-hidden">
+                <!-- product -->
+                <!-- <div class="product border-4 border-yellow-300 rounded-3xl bg-white flex flex-col justify-center items-center p-4">
+                    <img src="https://cdn.dummyjson.com/products/images/beauty/Essence%20Mascara%20Lash%20Princess/thumbnail.png" class="w-48 h-48" alt="">                    
+                    <h1 class="title text-2xl font-bold tracking-wider">Essence Mascara Lash Princess</h1>
+                    <h3 class="price text-xl">Price : <span class="font-extrabold">$9.99</span> </h3>
+                    <div class="descriptions">
+                        <h1 class="description text-sm inline">The Essence Mascara Lash Princess is a popular mascara known for its volumizing and lengthening effects. Achieve dramatic lashes with this long-lasting and cruelty-free formula.</h1>
+                        <button class="readMore inline cursor-pointer text-blue-950 font-bold">Read More...</button>
+                        <button class="readLess hidden cursor-pointer text-blue-950 font-bold">Read Less...</button>
+                    </div>                    
+                    <div class="rating font-bold text-blue-900 text-lg">
+                        <p>Ratings : <span>4.35</span></p>
+                        <div>
+                            <i class="fa-regular fa-star text-yellow-600"></i>
+                            <i class="fa-regular fa-star text-yellow-600"></i>
+                            <i class="fa-regular fa-star text-yellow-600"></i>
+                            <i class="fa-regular fa-star text-yellow-600"></i>
+                            <i class="fa-regular fa-star text-yellow-600"></i>                            
+                        </div>
+                    </div>
+                    <p class="category font-bold text-yellow-600 text-lg">Category : <span>Beauty</span></p>
+                </div> -->
+            </div>
+        </section>
+    </div>
+    <script type="module" src="products.js"></script>
+    <script type="module" src="cart.js"></script>
+</body>
+
+<!-- <script src="script.js"></script> -->
+
+</html>

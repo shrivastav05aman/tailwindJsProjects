@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Loan Calculator</title>
+    <link rel="stylesheet" href="output.css">
+</head>
+<body>
+    <!-- header -->
+    <header class="w-full bg-blue-400 py-6">
+        <p class="text-4xl font-bold text-center text-white tracking-wider">Loan Calculator</p>
+    </header>
+
+    <!-- input section -->
+    <div class="flex flex-col space-y-10 lg:space-y-0  container mx-auto lg:flex-row lg:justify-around lg:items-start ">
+        <form class="values border border-gray-300 my-5 px-4 py-8 flex flex-col space-y-12 lg:w-2xl ">
+            <!-- loan amount -->
+            <div class="loanAmount h-32 pt-2 p-4 ">
+                <div class="flex justify-between text-xl">
+                    <h1>Loan Amount</h1>
+                    <p class="text-blue-400">₹ <span class="font-bold"></span></p>
+                </div>
+                <div class="mt-4 slider">
+                    <input type="range" id="inpAmount"
+                        class="w-full cursor-pointer h-2 appearance-none bg-blue-400 rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:bg-yellow-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-blue-400 outline-none"
+                        min="0" max="10000000" step="100000">
+                </div>
+        
+                <div class="relative">
+                    <hr class="border w-5 rotate-90 absolute left-[1%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[24.75%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[48.75%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[72.5%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute right-[.75%] -z-10">
+                </div>
+        
+                <div class="amount my-4 flex text-lg font-semibold relative">
+                    <p class="absolute left-[1%]">0L</p>
+                    <p class="absolute left-[24.75%]">25L</p>
+                    <p class="absolute left-[48.75%]">50L</p>
+                    <p class="absolute left-[72.5%]">75L</p>
+                    <p class="absolute right-[.75%]">1Cr</p>
+        
+                </div>
+            </div>
+        
+            <!-- interest -->
+            <div class="interest h-32 pt-2 p-4 ">
+                <div class="flex justify-between text-xl">
+                    <h1>Rate of Interest</h1>
+                    <p class="text-blue-400"><span class="font-bold"></span> %</p>
+                </div>
+                <div class="mt-4 slider">
+                    <input type="range" id="inpRate"
+                        class="w-full cursor-pointer h-2 appearance-none bg-blue-400 rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:bg-yellow-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-blue-400 outline-none"
+                        min="5" max="15" step="0.1">
+                </div>
+        
+                <div class="relative">
+                    <hr class="border w-5 rotate-90 absolute left-[1%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[10.5%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[20.15%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[29.8%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[39.15%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[48.75%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[58.4%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[67.95%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[77.5%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[87.15%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute right-[.75%] -z-10">
+                </div>
+        
+                <div class="amount my-4 flex text-lg font-semibold relative">
+                    <p class="absolute left-[1%]">5%</p>
+                    <p class="absolute left-[10.5%]">6%</p>
+                    <p class="absolute left-[20.15%]">7%</p>
+                    <p class="absolute left-[29.8%]">8%</p>
+                    <p class="absolute left-[39.15%]">9%</p>
+                    <p class="absolute left-[48.75%]">10%</p>
+                    <p class="absolute left-[58.4%]">11%</p>
+                    <p class="absolute left-[67.95%]">12%</p>
+                    <p class="absolute left-[77.5%]">13%</p>
+                    <p class="absolute left-[87.15%]">14%</p>
+                    <p class="absolute right-0">15%</p>
+        
+                </div>
+            </div>
+        
+            <!-- time -->
+            <div class="time h-32 pt-2 p-4 ">
+                <div class="flex justify-between text-xl">
+                    <h1>Time Period</h1>
+                    <p class="text-blue-400"><span class="font-bold"></span> Years</p>
+                </div>
+                <div class="mt-4 slider">
+                    <input type="range" id="inpTime"
+                        class="w-full cursor-pointer h-2 appearance-none bg-blue-400 rounded-lg [&::-webkit-slider-thumb]:appearance-none [&::-webkit-slider-thumb]:h-8 [&::-webkit-slider-thumb]:w-8 [&::-webkit-slider-thumb]:bg-yellow-400 [&::-webkit-slider-thumb]:rounded-full [&::-webkit-slider-thumb]:border-4 [&::-webkit-slider-thumb]:border-blue-400 outline-none"
+                        ,min="1" max="50" step="1">
+                </div>
+        
+                <div class="relative">
+                    <hr class="border w-5 rotate-90 absolute left-[1%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[10.5%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[20.15%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[29.8%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[39.15%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[48.75%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[58.4%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[67.95%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[77.5%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute left-[87.15%] -z-10">
+                    <hr class="border w-5 rotate-90 absolute right-[.75%] -z-10">
+                </div>
+        
+                <div class="amount my-4 flex text-lg font-semibold relative">
+                    <p class="absolute left-[1%]">0 Yr</p>
+                    <p class="absolute left-[10.5%]">5 Yr</p>
+                    <p class="absolute left-[20.15%]">10 Yr</p>
+                    <p class="absolute left-[29.8%]">15 Yr</p>
+                    <p class="absolute left-[39.15%]">20 Yr</p>
+                    <p class="absolute left-[48.75%]">25 Yr</p>
+                    <p class="absolute left-[58.4%]">30 Yr</p>
+                    <p class="absolute left-[67.95%]">35 Yr</p>
+                    <p class="absolute left-[77.5%]">40 Yr</p>
+                    <p class="absolute left-[87.15%]">45 Yr</p>
+                    <p class="absolute right-0">50 Yr</p>
+                </div>
+            </div>
+            
+
+            <!-- submit button -->
+            <button type="submit" 
+                class="bg-blue-400 py-2 text-xl text-white font-bold tracking-wider w-fit mx-auto px-6 rounded-full cursor-pointer hover:bg-blue-300 duration-200 ease-in-out outline-none">Get
+                Detailed Calculations</button>
+        </form>
+        
+
+        <!-- div for calculation table -->
+        <div class="calculations hidden border border-gray-300 my-8 h-fit lg:w-2xl">
+            
+        </div>
+    </div>
+
+    
+
+    <!-- chart section -->
+
+    <canvas id="canvas" class="container mx-auto my-10 hidden"></canvas>
+
+    <!-- emi table -->
+    <div class="emiTable container mx-auto my-10 ">
+        <!-- heading -->
+        <!-- <div class="grid grid-cols-6">
+            <h2 class="bg-blue-400 w-full px-4 text-white text-lg font-bold py-3 flex items-center justify-center border border-white">Month</h2>
+            <h2 class="bg-blue-400 w-full px-4 text-white text-lg font-bold py-3 flex items-center justify-center border border-white">Begining Loan Balance</h2>
+            <h2 class="bg-blue-400 w-full px-4 text-white text-lg font-bold py-3 flex items-center justify-center border border-white">EMI</h2>
+            <h2 class="bg-blue-400 w-full px-4 text-white text-lg font-bold py-3 flex items-center justify-center border border-white">Principal</h2>
+            <h2 class="bg-blue-400 w-full px-4 text-white text-lg font-bold py-3 flex items-center justify-center border border-white">Monthly Interest</h2>
+            <h2 class="bg-blue-400 w-full px-4 text-white text-lg font-bold py-3 flex items-center justify-center border border-white">Outstanding Balance</h2>
+        </div>
+
+        data
+        <div class="grid grid-cols-6">
+            <h2 class="bg-gray-200 w-full px-4 text-lg py-3 flex items-center justify-center border border-gray-300">1</h2>
+            <h2 class="bg-gray-200 w-full px-4 text-lg py-3 flex items-center justify-center border border-gray-300">₹ 500000</h2>
+            <h2 class="bg-gray-200 w-full px-4 text-lg py-3 flex items-center justify-center border border-gray-300">₹ 21936</h2>
+            <h2 class="bg-gray-200 w-full px-4 text-lg py-3 flex items-center justify-center border border-gray-300">₹ 19852</h2>
+            <h2 class="bg-gray-200 w-full px-4 text-lg py-3 flex items-center justify-center border border-gray-300">₹ 2083</h2>
+            <h2 class="bg-gray-200 w-full px-4 text-lg py-3 flex items-center justify-center border border-gray-300">₹ 480148</h2>
+        </div> -->
+    </div>
+    
+    
+</body>
+
+<script src="script.js"></script>
+<script src="
+https://cdn.jsdelivr.net/npm/chart.js@4.4.8/dist/chart.umd.min.js
+"></script>
+</html>
