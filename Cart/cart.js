@@ -80,7 +80,6 @@ for(let i=0; i<removeCartBtn.length; i++){
         showCartProducts(cartProducts)
         addFunctionality(cartProducts)
         location.reload()
-        console.log(removeCartBtn)
     })
 }
 
