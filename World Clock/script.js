@@ -267,3 +267,4 @@ setInterval(() => {
     hour.style.rotate = `${(exactTime.split(":")[0]*30)-90}deg`
 
 },1000);
+
